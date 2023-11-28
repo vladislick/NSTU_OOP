@@ -14,14 +14,13 @@ public class MenuBar {
 	// Создание непосредственно объекта меню
 	private JMenuBar menuBar;
 	// Создание ссылки на панель
-	private Panels panel;
+	private Panels mypanel;
 	// Создание меню
-	@SuppressWarnings("deprecation")
 	public MenuBar(Panels panel) {
 		// Создание строки меню
 		menuBar = new JMenuBar();
 		// Привязка панели
-		this.panel = panel;
+		this.mypanel = panel;
 		// Создание меню "Файл"
 		JMenu menuFile = new JMenu("Файл");
 		// Создание и настройка элемента меню "Выход"
@@ -47,7 +46,7 @@ public class MenuBar {
 		menuItemSave.addActionListener(new ActionListener () {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				panel.save();
+				mypanel.save();
 			}
 		});
 		
@@ -57,7 +56,7 @@ public class MenuBar {
 		menuItemReset.addActionListener(new ActionListener () {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				panel.reset();
+				mypanel.reset();
 			}
 		});
 		
