@@ -26,7 +26,7 @@ public class MyClass {
 		// Сортировка по цене методом пузырька
 		Car tmp = new Car();
 		for (int i = 0; i < mycars.length; i++) {
-			for (int j = i; j < (mycars.length - 1); j++) {
+			for (int j = 0; j < (mycars.length - 1); j++) {
 				if (mycars[j].price > mycars[j + 1].price) {
 					tmp = mycars[j];
 					mycars[j] = mycars[j + 1];
